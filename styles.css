@@ -3,12 +3,21 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url(http://www.ohdisco.com/images/screen_1_small.png);
+  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+
 }
+
+a:hover{
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+
 .title, .actionButton{
   padding:5px 12px;
   float:right;
@@ -31,18 +40,16 @@ body, a:link, a:visited, a:active{
   border-radius:50%;
 }
 
-.color{
+.white{
   border-color: white;
 }
 
-.colorDancer{
-  border:10px black;
-  border-radius:10px;
-  position:absolute;
+.black{
+  border-color: black;
 }
 
 .image{
-  width: 60px;
-  height: 60px;
-  border: 0px solid black;
+  width: 80px;
+  height: 80px;
+  border-width: 0px;
 }

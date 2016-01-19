@@ -19,6 +19,12 @@ describe("blinkyDancer", function() {
     expect(blinkyDancer.$node.toggle.called).to.be.true;
   });
 
+  it("should have a congregate function that makes its node move to a point in the browser", function() {
+    sinon.spy(blinkyDancer.$node, 'animate');
+    blinkyDancer.congregate();
+    expect(blinkyDancer.$node.animate.called).to.be.true;
+  });
+
   describe("dance", function(){
     it("should call step at least once per second", function(){
       sinon.spy(blinkyDancer, "step");

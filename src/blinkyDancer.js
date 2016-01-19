@@ -3,6 +3,8 @@ var BlinkyDancer = function(top, left, timeBetweenSteps){
   // *this* = Object.create(BlinkyDancer.prototype);
   Dancer.call(this, top, left, timeBetweenSteps); // this may call oldStep before it should be called
   //return this;
+  this.left = $("body").width() * 0.5;
+  this.top = $("body").height() * 0.5;
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
@@ -12,6 +14,12 @@ BlinkyDancer.prototype.step = function(){
   this.$node.toggle();
 };
 
+BlinkyDancer.prototype.lineUp = function(){
+    this.$node.animate({
+      top: $("body").height() * 0.8,
+      //left: $("body").width() * 0.7
+    });
+}
 // //-------old pattern-----------
 // var makeBlinkyDancer = function(top, left, timeBetweenSteps){
 //   var blinkyDancer = makeDancer(top, left, timeBetweenSteps);

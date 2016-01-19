@@ -4,6 +4,7 @@
     <title>Object Dance Party</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
     <script src="src/circleDancer.js"></script>
@@ -14,11 +15,15 @@
   <body>
     <div class="topbar">
       <span class="title">object dance party</span>
+      <button class="lineUpButton title">line up the dancers!!!</button>
+      <button class="congregateButton title">congregate!!!</button>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>    
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="CircleDancer">add a circle dancer</a> 
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="ColorDancer">add a color dancer</a> 
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="ImageBlinkyDancer">add an image blinky dancer</a> 
       </div>
     <script src="src/init.js"></script>
+
+    <!-- <audio id="hadouken-sound" src="sound/hadouken.mp3"> -->
   </body>
 </html>

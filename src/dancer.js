@@ -3,6 +3,11 @@ var Dancer = function(top, left, timeBetweenSteps){
   // this = {};
   this.$node = $('<span class="dancer"></span>');
   this.timeBetweenSteps = timeBetweenSteps;
+  this.check = true;
+  this.styleSettings = {
+      top: top,
+      left: left
+    };
 
   this.step();
 
@@ -12,19 +17,41 @@ var Dancer = function(top, left, timeBetweenSteps){
 };
 
 Dancer.prototype.step = function() {
-  setTimeout(this.step.bind(this) , this.timeBetweenSteps);
+  if(!this.$node.hasClass('stopToggle')){
+    setTimeout(this.step.bind(this) , this.timeBetweenSteps);
+  }
+
   // var context = this;
   // setTimeout(function(){context.step.call(context);}, this.timeBetweenSteps);
 };
 // when this.step runs inside setTimeout, 
   // it's 'this' binding will be 
 Dancer.prototype.setPosition = function(top, left) {
-  var styleSettings = {
-      top: top,
-      left: left
-    };
+  //this.styleSettings = {
+      //top: top,
+      //left: left
+    //};
 
-    this.$node.css(styleSettings);
+    this.$node.css(this.styleSettings);
+};
+
+Dancer.prototype.lineUp = function(){
+  this.$node.animate({
+    left: 20
+  });
+};
+
+Dancer.prototype.congregate = function() {
+  if(this.check === true){
+    this.check = false;
+    this.$node.animate({
+      left: this.left,
+      top: this.top
+    });
+  } else {
+    this.$node.animate(this.styleSettings);
+    this.check = true;
+  }
 };
 
 // var makeDancer = function(top, left, timeBetweenSteps){
