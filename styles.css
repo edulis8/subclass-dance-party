@@ -8,7 +8,7 @@ body{
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  
 
 }
 
@@ -49,7 +49,15 @@ a:hover{
 }
 
 .image{
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: 150px;
   border-width: 0px;
 }
+
+.calvin{
+  width: 400px;
+  height: 400px;
+}
+
+
+

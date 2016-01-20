@@ -4,7 +4,7 @@ var ImageBlinkyDancer = function(top, left, timeBetweenSteps){
   //return this;
   this.left = 20;
   this.top = 20;
-  this.$node.html("<img class='image' src='https://cdn3.iconfinder.com/data/icons/vacation-4/32/vacation_30-512.png''>");
+  this.$node.html("<img class='image' src='https://cdn3.iconfinder.com/data/icons/vacation-4/32/vacation_30-512.png'>");
   this.$node.addClass('image');
 };
 

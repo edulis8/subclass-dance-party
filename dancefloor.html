@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Object Dance Party</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -10,18 +11,22 @@
     <script src="src/circleDancer.js"></script>
     <script src="src/colorDancer.js"></script>
     <script src="src/imageBlinkyDancer.js"></script>
+    <script src="src/animateDancer.js"></script>
+    <script src="src/calvinDancer.js"></script>
     
   </head>
   <body>
     <div class="topbar">
-      <span class="title">object dance party</span>
-      <button class="lineUpButton title">line up the dancers!!!</button>
-      <button class="congregateButton title">congregate!!!</button>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>    
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="CircleDancer">add a circle dancer</a> 
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="ColorDancer">add a color dancer</a> 
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="ImageBlinkyDancer">add an image blinky dancer</a> 
+      <h4 class="title">object dance party</h4>
+      <button class="btn btn-warning lineUpButton title">line up the dancers!!!</button>
+      <button class="btn btn-warning congregateButton title">congregate!!!</button>
+      <a href="#" class="btn btn-success addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>    
+      <a href="#" class="btn btn-success addDancerButton" data-dancer-maker-function-name="CircleDancer">add a circle dancer</a> 
+      <a href="#" class="btn btn-success addDancerButton" data-dancer-maker-function-name="ColorDancer">add a color dancer</a> 
+      <a href="#" class="btn btn-success addDancerButton" data-dancer-maker-function-name="ImageBlinkyDancer">add an image blinky dancer</a> 
+      <a href="#" class="btn btn-success addDancerButton" data-dancer-maker-function-name="CalvinDancer">add Calvin and Hobbes</a> 
       </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="src/init.js"></script>
 
     <!-- <audio id="hadouken-sound" src="sound/hadouken.mp3"> -->
