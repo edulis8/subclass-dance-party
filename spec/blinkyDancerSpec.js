@@ -50,11 +50,9 @@ describe("blinkyDancer", function() {
 
   it("should have a calcDistance function that modifies the this.distance object", function() {
     expect(blinkyDancer).to.have.a.property("distances");
-    //expect.deepEqual(blinkyDancer.distance, {}, "yay deep equalness");
     blinkyDancer.calcDistance([1,2,3]);
     
     console.log('euclid calculation inside spec', euclid([3,4],[66,4]))
-    //expect(blinkyDancer.distances).to.have.property("value");
     expect(blinkyDancer.distances).to.have.keys('0','1','2');
   });
  

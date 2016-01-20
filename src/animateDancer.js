@@ -1,8 +1,5 @@
 var AnimateDancer = function(top, left, timeBetweenSteps){
-  //var AnimateDancer = new Dancer(top, left, timeBetweenSteps);
-  // *this* = Object.create(AnimateDancer.prototype);
-  Dancer.call(this, top, left, timeBetweenSteps); // this may call oldStep before it should be called
-  //return this;
+  Dancer.call(this, top, left, timeBetweenSteps); 
   this.left = $("body").width() * 0.75;
   this.top = $("body").height() * 0.25;
 };

@@ -27,11 +27,11 @@ a:hover{
   background-color: #555;
 }
 .title{
-  background-color: #777;
+  
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  border:30px solid red;
+  border-radius:50%;
   position:absolute;
 }
 
@@ -42,6 +42,7 @@ a:hover{
 
 .white{
   border-color: white;
+  border-radius: 40px;
 }
 
 .black{
@@ -59,5 +60,7 @@ a:hover{
   height: 400px;
 }
 
-
+.opacity{
+  opacity: 0.5;
+}
 
