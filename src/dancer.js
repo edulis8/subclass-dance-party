@@ -94,9 +94,9 @@ Dancer.prototype.addMouseover = function() {
   
   this.location = this.styleSettings;
 
-  this.$node.on("mouseenter", function(){
-    console.log('onMouseEnter', this.location)
-  }.bind(this))
+  // this.$node.on("mouseenter", function(){
+  //   console.log('onMouseEnter', this.location)
+  // }.bind(this));
 
   this.$node.on("mousedown", function(){
     console.log(this.closest);

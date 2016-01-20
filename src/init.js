@@ -36,12 +36,10 @@ $(document).ready(function(){
     }
   });
 
-  // $('body').on("mouseover", ".dancer", function(){
-  //   for(var i = 0; i < window.dancers.length; i++){
-  //     window.dancers[i].shorten();
-  //   }
-  // });
-
+  $('body').on("mouseover", ".dancer", function(){
+    $(this).addClass('opacity');
+  });
+  
 
   $('.congregateButton').on( "click", function(){
     for(var i = 0; i < window.dancers.length; i++){
