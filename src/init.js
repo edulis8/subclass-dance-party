@@ -31,6 +31,13 @@ $(document).ready(function(){
 
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
+
+    // CALCDISTANCE
+    for(var i = 0; i < window.dancers.length; i++){
+      window.dancers[i].calcDistance(window.dancers);
+      console.log(window.dancers[i]);
+    }
+
   });
 
   $('.lineUpButton').on( "click", function(){
@@ -51,6 +58,27 @@ $(document).ready(function(){
   });
 
 });
+
+var merge = function(array1, array2, callback){ 
+        
+  var mergedArr = [];
+        
+  for(var i = 0; i < array1.length; i++){
+    mergedArr.push(callback(array1[i], array2[i]));
+  }
+
+  return mergedArr;
+};
+
+var euclid = function(coords1, coords2){
+  var squaredDeltas = merge(coords1, coords2, function(a,b){
+    return Math.abs((a-b)*(a-b));
+  });
+
+  var answer = Math.sqrt(squaredDeltas[0] + squaredDeltas[1]);
+
+  return answer;
+};
 
 // Make dancers that interact with other dancers. For example, by iterating across the array window.dancers and using the Pythagorean Theorem to calculate *your* distance from each other dancer, you can have a dancer find its n closest neighbors and do something based on their positions.
 
@@ -81,6 +109,29 @@ $(document).ready(function(){
         //2: 5.6
   // }
 
+// iterate over window.dancers[i] and find the distance between the focal dancer and every other dancer
+  // store this in an object for each focal dancer where key = other dancers i and value = distance between them
+    // iterate through each object finding the shortest distance out of every object (this returns 1 value total, not
+    // 1 value for each object)
+      // when this distance is found, have those n dancers interact. delete these dancers from every other object. repeat
+      // until done
+
+// new method that runs on every dancer, inside .addDancerButton listener
+// //dancer.distances = {
+//   1: 44
+//   2: 3
+//   3: 99
+//   4: 2
+// }
+// perform a operation that gets the lowest 3.
+// // lowestThree = {
+//     4: 2
+//     2: 3
+//     1: 44
+//     }
+// 
+// for-in loop on lowestThree
+  // window.dancers[key].$node
 
 
 
