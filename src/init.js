@@ -38,6 +38,7 @@ $(document).ready(function(){
 
   $('body').on("mouseover", ".dancer", function(){
     $(this).addClass('opacity');
+    playMoo();
   });
   
 
@@ -78,6 +79,11 @@ var euclid = function(coords1, coords2){
   return answer;
 };
 
+function playMoo(){
+  $('#moo')[0].volume = 0.3;
+  $('#moo')[0].load();
+  $('#moo')[0].play();
+}
 
 
 

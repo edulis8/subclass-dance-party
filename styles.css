@@ -64,3 +64,9 @@ a:hover{
   opacity: 0.5;
 }
 
+.discoball {
+  width: 75px;
+  height: 75px;
+  border: 0px solid black;
+}
+
